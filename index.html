@@ -1,491 +1,333 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pixi Digital – Web Design & AI Automation | Bavaria, Germany</title>
-  <meta name="description" content="Pixi Digital offers professional web design for small businesses, AI workflow automation, and AI chatbots. Based in Bavaria, Germany. Serving clients in DE, EN, HU, HR, SR." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet" />
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22%3E%3Crect width=%2232%22 height=%2232%22 rx=%226%22 fill=%22%23000%22/%3E%3Ccircle cx=%228%22 cy=%228%22 r=%223%22 fill=%22%237B5CF0%22/%3E%3Ctext x=%2216%22 y=%2224%22 font-family=%22Arial Black,Arial,sans-serif%22 font-weight=%22800%22 font-size=%2221%22 fill=%22%23fff%22 text-anchor=%22middle%22%3EP%3C/text%3E%3C/svg%3E" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pixi Digital – Webdesign und KI-Automatisierung für Unternehmen in Bayern</title>
+  <meta name="description" content="Pixi Digital gestaltet Websites für kleine und mittlere Unternehmen, automatisiert Abläufe mit KI und baut Chatbots. Beratung auf Deutsch, Englisch, Ungarisch, Kroatisch und Serbisch." />
+  <link rel="canonical" href="https://pixidigital.io/" />
+  <meta name="theme-color" content="#d6d9dd" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="de_DE" />
+  <meta property="og:site_name" content="Pixi Digital" />
+  <meta property="og:title" content="Pixi Digital – Webdesign und KI-Automatisierung" />
+  <meta property="og:description" content="Websites, die Anfragen bringen. Abläufe, die von selbst laufen. Für kleine und mittlere Unternehmen in Deutschland, Österreich und der Schweiz." />
+  <meta property="og:url" content="https://pixidigital.io/" />
+
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="preload" href="fonts/archivo-latin-wdth-normal.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="stylesheet" href="style.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Pixi Digital",
+    "url": "https://pixidigital.io/",
+    "email": "contact@pixidigital.io",
+    "description": "Webdesign, KI-Workflow-Automatisierung und KI-Chatbots für kleine und mittlere Unternehmen.",
+    "areaServed": ["DE", "AT", "CH", "HR", "HU", "RS"],
+    "knowsLanguage": ["de", "en", "hu", "hr", "sr"]
+  }
+  </script>
 </head>
 <body>
+  <a class="skip-link" href="#inhalt">Zum Inhalt springen</a>
 
-  <!-- NAVIGATION -->
-  <header class="header" id="header">
-    <nav class="nav container">
-      <a href="#hero" class="nav__logo">
-        <span class="logo-dot"></span>
-        Pixi<span class="logo-accent">Digital</span>
+  <header class="site-header" id="siteHeader">
+    <div class="wrap">
+      <a class="brand" href="#top" aria-label="Pixi Digital, zum Seitenanfang">
+        <svg viewBox="0 0 20 25" aria-hidden="true" focusable="false">
+          <g fill="#1f2429">
+            <rect x="0" y="0" width="4.6" height="4.6"/><rect x="5" y="0" width="4.6" height="4.6"/><rect x="10" y="0" width="4.6" height="4.6"/>
+            <rect x="0" y="5" width="4.6" height="4.6"/>
+            <rect x="0" y="10" width="4.6" height="4.6"/><rect x="5" y="10" width="4.6" height="4.6"/><rect x="10" y="10" width="4.6" height="4.6"/>
+            <rect x="0" y="15" width="4.6" height="4.6"/>
+            <rect x="0" y="20" width="4.6" height="4.6"/>
+          </g>
+          <rect x="15" y="5" width="4.6" height="4.6" fill="#a9592a"/>
+        </svg>
+        <b>Pixi</b><span>Digital</span>
       </a>
-      <button class="nav__burger" id="burger" aria-label="Toggle menu">
-        <span></span><span></span><span></span>
-      </button>
-      <ul class="nav__links" id="navLinks">
-        <li><a href="#services">Services</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#contact" class="btn btn--nav">Let's Talk</a></li>
-      </ul>
-    </nav>
+      <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="siteNav" aria-label="Menü öffnen"><span></span></button>
+      <nav aria-label="Hauptnavigation">
+        <ul class="nav-list" id="siteNav">
+          <li><a href="#leistungen">Leistungen</a></li>
+          <li><a href="#ueber-mich">Über mich</a></li>
+          <li><a href="#projekte">Projekte</a></li>
+          <li><a class="btn btn--ink btn--sm" href="#kontakt">Kontakt</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <!-- HERO -->
-  <section class="hero" id="hero">
-    <div class="hero__shapes">
-      <div class="shape shape--1"></div>
-      <div class="shape shape--2"></div>
-      <div class="shape shape--3"></div>
-    </div>
-    <div class="container hero__content">
-      <div class="hero__tag">
-        <span class="tag-dot"></span>
-        Available for new projects
-      </div>
-      <h1 class="hero__title">
-        Web & AI Solutions<br />
-        for <span class="gradient-text">Growing Businesses</span>
-      </h1>
-      <p class="hero__sub">
-        I help small businesses in the DACH region and beyond get online, automate workflows, and engage customers — with modern websites and intelligent AI tools.
-      </p>
-      <div class="hero__cta">
-        <a href="#contact" class="btn btn--primary">Start a Project</a>
-        <a href="#portfolio" class="btn btn--ghost">View Work</a>
-      </div>
-      <div class="hero__languages">
-        <span class="lang-label">I speak:</span>
-        <div class="lang-chips">
-          <span class="chip">🇩🇪 Deutsch</span>
-          <span class="chip">🇬🇧 English</span>
-          <span class="chip">🇭🇺 Magyar</span>
-          <span class="chip">🇭🇷 Hrvatski</span>
-          <span class="chip">🇷🇸 Srpski</span>
+  <main id="inhalt">
+    <canvas class="pixel-fall" id="pixelFall" aria-hidden="true"></canvas>
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="wrap hero__inner">
+        <h1 id="hero-title">Websites und <span class="nb">KI-Automatisierung</span> für Betriebe, die wachsen wollen</h1>
+        <p class="hero__lead">Ich gestalte Websites, die Anfragen bringen, und automatisiere Abläufe, die täglich Zeit kosten. Persönlich, direkt und in fünf Sprachen.</p>
+        <div class="hero__actions">
+          <a class="btn btn--copper" href="#kontakt">Projekt anfragen</a>
+          <a class="btn btn--line" href="#leistungen">Leistungen ansehen</a>
         </div>
+        <ul class="facts">
+          <li>Antwort innerhalb von 24 Stunden</li>
+          <li>Umsetzung meist in 2 bis 4 Wochen</li>
+        </ul>
       </div>
-    </div>
-  </section>
-
-  <!-- SERVICES -->
-  <section class="services section" id="services">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">What I offer</span>
-        <h2>Services</h2>
-        <p>From your first website to intelligent automation — I cover the digital essentials that move small businesses forward.</p>
+      <div class="hero__strip">
+        <ul>
+          <li><a href="#webdesign"><strong>Webdesign</strong><span>Websites, die Anfragen bringen</span></a></li>
+          <li><a href="#automatisierung"><strong>KI-Automatisierung</strong><span>Abläufe, die von selbst laufen</span></a></li>
+          <li><a href="#chatbots"><strong>KI-Chatbots</strong><span>Antworten rund um die Uhr</span></a></li>
+        </ul>
       </div>
+    </section>
 
-      <div class="services__grid">
+    <section class="section" id="leistungen" aria-labelledby="leistungen-title">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="leistungen-title">Was ich für Sie umsetze</h2>
+          <p>Von der ersten Website bis zur automatisierten Anfragebearbeitung.</p>
+        </div>
 
-        <div class="service-card">
-          <div class="service-card__number">01</div>
-          <div class="service-card__icon">
-            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="4" y="8" width="40" height="28" rx="4" stroke="currentColor" stroke-width="2.5"/>
-              <path d="M16 44h16M24 36v8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
-              <path d="M14 20l6 6 14-12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
+        <article class="service" id="webdesign">
+          <div>
+            <h3>Webdesign und Entwicklung</h3>
+            <p>Schnelle, mobiltaugliche Websites, die Besucher zu Anfragen machen. Sauber programmiert, für Suchmaschinen vorbereitet und von Ihnen selbst pflegbar.</p>
+            <a class="link-action" href="#kontakt" data-service="Webdesign">Webdesign anfragen</a>
           </div>
-          <h3>Web Design for Small Businesses</h3>
-          <p>Fast, modern, mobile-friendly websites that turn visitors into customers. Clean code, SEO-ready, and easy for you to manage.</p>
-          <ul class="service-card__features">
-            <li>Responsive design</li>
-            <li>SEO optimization</li>
-            <li>Contact forms & booking</li>
-            <li>Performance & speed</li>
-            <li>Ongoing support</li>
+          <ul class="checklist">
+            <li>Responsives Design für jedes Gerät</li>
+            <li>Grundlagen der Suchmaschinenoptimierung</li>
+            <li>Kontaktformulare und Terminbuchung</li>
+            <li>Ladezeit und Performance</li>
+            <li>Betreuung nach dem Launch</li>
           </ul>
-          <a href="#contact" class="service-card__link">Get a quote →</a>
-        </div>
+        </article>
 
-        <div class="service-card service-card--featured">
-          <div class="service-card__number">02</div>
-          <div class="service-card__icon">
-            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="24" cy="24" r="10" stroke="currentColor" stroke-width="2.5"/>
-              <path d="M24 4v6M24 38v6M4 24h6M38 24h6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
-              <path d="M11.5 11.5l4.25 4.25M32.25 32.25l4.25 4.25M11.5 36.5l4.25-4.25M32.25 15.75l4.25-4.25" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
-            </svg>
+        <article class="service" id="automatisierung">
+          <div>
+            <h3>KI-Workflow-Automatisierung</h3>
+            <p>Wiederkehrende Aufgaben laufen von selbst. Ich verbinde Ihre Tools und automatisiere Abläufe mit n8n, Make und Zapier.</p>
+            <a class="link-action" href="#kontakt" data-service="KI-Automatisierung">Automatisierung anfragen</a>
           </div>
-          <div class="service-card__badge">Most Popular</div>
-          <h3>AI Workflow Automation</h3>
-          <p>Cut repetitive tasks and save hours each week. I connect your tools and automate your business processes using modern AI platforms.</p>
-          <ul class="service-card__features">
-            <li>Process analysis & mapping</li>
-            <li>n8n / Make / Zapier flows</li>
-            <li>CRM & email automation</li>
-            <li>Document processing</li>
-            <li>Custom AI pipelines</li>
+          <ul class="checklist">
+            <li>Analyse Ihrer bestehenden Abläufe</li>
+            <li>Workflows mit n8n, Make und Zapier</li>
+            <li>CRM- und E-Mail-Automatisierung</li>
+            <li>Verarbeitung von Dokumenten</li>
+            <li>Individuelle KI-Pipelines</li>
           </ul>
-          <a href="#contact" class="service-card__link">Learn more →</a>
-        </div>
+        </article>
 
-        <div class="service-card">
-          <div class="service-card__number">03</div>
-          <div class="service-card__icon">
-            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M8 32V12a4 4 0 014-4h24a4 4 0 014 4v16a4 4 0 01-4 4H16l-8 8V32z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
-              <circle cx="17" cy="22" r="2" fill="currentColor"/>
-              <circle cx="24" cy="22" r="2" fill="currentColor"/>
-              <circle cx="31" cy="22" r="2" fill="currentColor"/>
-            </svg>
+        <article class="service" id="chatbots">
+          <div>
+            <h3>KI-Chatbots</h3>
+            <p>Ein Assistent beantwortet Kundenfragen rund um die Uhr, qualifiziert Anfragen und bucht Termine, in Ihrer Sprache und Ihrem Ton.</p>
+            <a class="link-action" href="#kontakt" data-service="KI-Chatbot">Chatbot anfragen</a>
           </div>
-          <h3>AI Chatbots for Business</h3>
-          <p>Custom AI assistants that answer customer questions 24/7, qualify leads, and book appointments — in your language, your tone.</p>
-          <ul class="service-card__features">
-            <li>Multilingual support</li>
-            <li>Website & WhatsApp integration</li>
-            <li>Lead qualification</li>
-            <li>Appointment booking</li>
-            <li>Custom knowledge base</li>
+          <ul class="checklist">
+            <li>Mehrsprachig</li>
+            <li>Einbindung in Website und WhatsApp</li>
+            <li>Qualifizierung von Anfragen</li>
+            <li>Terminbuchung</li>
+            <li>Eigene Wissensbasis</li>
           </ul>
-          <a href="#contact" class="service-card__link">Get a demo →</a>
-        </div>
-
+        </article>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ABOUT -->
-  <section class="about section" id="about">
-    <div class="container about__layout">
-      <div class="about__visual">
-        <div class="about__card about__card--main">
-          <div class="about__avatar">PD</div>
-          <strong>Pixi Digital</strong>
-          <span>Bavaria, Germany</span>
-        </div>
-        <div class="about__card about__card--stat">
-          <strong>5+</strong>
-          <span>Languages spoken</span>
-        </div>
-
-        <div class="about__flag-row">
-          <span title="Germany">🇩🇪</span>
-          <span title="Austria">🇦🇹</span>
-          <span title="Switzerland">🇨🇭</span>
-          <span title="Croatia">🇭🇷</span>
-          <span title="Hungary">🇭🇺</span>
-          <span title="Serbia">🇷🇸</span>
+    <section class="section section--raised" id="ueber-mich" aria-labelledby="ueber-title">
+      <div class="wrap about">
+        <h2 id="ueber-title">Ein Ansprechpartner statt einer Agentur</h2>
+        <div>
+          <div class="about__text">
+            <p>Ich bin freiberuflicher Webdesigner und KI-Spezialist in Bayern. Ich arbeite mit kleinen Unternehmen, Handwerksbetrieben und Selbstständigen, die einen starken Auftritt im Netz brauchen, ohne den Aufwand einer großen Agentur.</p>
+            <p>Ich berate in der Sprache Ihres Marktes. Ob deutscher Handwerksbetrieb, kroatisches Start-up oder ungarischer Händler: Ich verstehe Ihre Kunden und Ihre Gepflogenheiten.</p>
+          </div>
+          <dl class="about__facts">
+            <div><dt>Sprachen</dt><dd>Deutsch, Englisch, Ungarisch, Kroatisch, Serbisch</dd></div>
+            <div><dt>Märkte</dt><dd>Deutschland, Österreich, Schweiz, Kroatien, Ungarn, Serbien</dd></div>
+            <div><dt>Standort</dt><dd>Bayern, Deutschland</dd></div>
+            <div><dt>Zusammenarbeit</dt><dd>Direkt mit mir, ohne Zwischenstationen</dd></div>
+          </dl>
         </div>
       </div>
+    </section>
 
-      <div class="about__text">
-        <span class="section-tag">About me</span>
-        <h2>Your digital partner<br />in the heart of Bavaria</h2>
-        <p>
-          I'm a freelance web designer and AI specialist based in Bavaria, Germany. I work with small businesses, craftspeople, and entrepreneurs who need a strong digital presence — without the complexity of a large agency.
-        </p>
-        <p>
-          What sets me apart is my ability to communicate with clients across Central and Southeastern Europe in their native language. Whether you're a German Handwerker, a Croatian startup, or a Hungarian retailer — I understand your market and your customers.
-        </p>
-
-        <div class="about__values">
-          <div class="value-item">
-            <div class="value-icon">&#128640;</div>
-            <div>
-              <strong>Fast delivery</strong>
-              <p>Most projects delivered within 2–4 weeks.</p>
-            </div>
-          </div>
-          <div class="value-item">
-            <div class="value-icon">&#128172;</div>
-            <div>
-              <strong>5 languages, 0 misunderstandings</strong>
-              <p>German · English · Hungarian · Croatian · Serbian</p>
-            </div>
-          </div>
-          <div class="value-item">
-            <div class="value-icon">&#128200;</div>
-            <div>
-              <strong>Results-focused</strong>
-              <p>Every project is built to generate real business outcomes.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PORTFOLIO -->
-  <section class="portfolio section" id="portfolio">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Recent work</span>
-        <h2>Portfolio</h2>
-        <p>A look at some of the projects I've built for real clients.</p>
-      </div>
-
-      <div class="portfolio__grid">
-
-        <div class="portfolio-card portfolio-card--featured">
-          <div class="portfolio-card__preview">
-            <div class="preview-browser">
-              <div class="preview-browser__bar">
-                <span></span><span></span><span></span>
-                <div class="preview-browser__url">lasercnc-allgaeu.de</div>
-              </div>
-              <div class="preview-browser__content dark-preview">
-                <div class="dp-nav"></div>
-                <div class="dp-hero">
-                  <div class="dp-title"></div>
-                  <div class="dp-sub"></div>
-                  <div class="dp-btn"></div>
-                </div>
-                <div class="dp-cards">
-                  <div class="dp-card"></div>
-                  <div class="dp-card"></div>
-                  <div class="dp-card"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="portfolio-card__info">
-            <div class="portfolio-card__tags">
-              <span class="tag">Web Design</span>
-              <span class="tag">German</span>
-              <span class="tag">Local Business</span>
-            </div>
-            <h3>LaserCNC Allgäu</h3>
-            <p>
-              A professional German-language website for a laser engraving and CNC milling company in Lindenberg im Allgäu, Bavaria. Modern dark design with service showcase, gallery, and contact form.
-            </p>
-            <ul class="portfolio-card__details">
-              <li><strong>Client:</strong> LaserCNC Allgäu, Lindenberg i.A.</li>
-              <li><strong>Stack:</strong> HTML · CSS · Vanilla JS</li>
-              <li><strong>Scope:</strong> Design, development, copywriting</li>
-              <li><strong>Language:</strong> German (DE)</li>
-            </ul>
-            <a href="https://keen-raindrop-94ec98.netlify.app" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--sm portfolio-card__cta">
-              View Live Site &nbsp;&#10148;
-            </a>
-          </div>
+    <section class="section" id="projekte" aria-labelledby="projekte-title">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="projekte-title">Ausgewählte Projekte</h2>
+          <p>Eigene Projekte, die zeigen, wie ich gestalte und entwickle.</p>
         </div>
 
-        <div class="portfolio-card">
-          <div class="portfolio-card__preview">
-            <video src="The%20Future.mp4" autoplay muted loop playsinline style="width:100%;height:100%;object-fit:cover;border-radius:inherit;display:block;"></video>
-          </div>
-          <div class="portfolio-card__info">
-            <div class="portfolio-card__tags">
-              <span class="tag">Web Design</span>
-              <span class="tag">Animation</span>
-              <span class="tag">Portfolio</span>
-            </div>
+        <figure class="reel">
+          <video id="reelVideo" src="The%20Future.mp4" poster="reel-poster.jpg" muted loop playsinline preload="metadata" aria-label="Videovorschau des Projekts Pixi Digital Spiral"></video>
+          <figcaption>Ausschnitt aus Pixi Digital Spiral</figcaption>
+        </figure>
+
+        <article class="project">
+          <div>
             <h3>Pixi Digital Spiral</h3>
-            <p>
-              An interactive 3D spiral portfolio showcase featuring cinematic video previews and smooth scroll animations. Built to demonstrate web design and AI automation work.
-            </p>
-            <ul class="portfolio-card__details">
-              <li><strong>Client:</strong> Pixi Digital</li>
-              <li><strong>Stack:</strong> HTML · CSS · Vanilla JS</li>
-              <li><strong>Scope:</strong> Design, development, animation</li>
-              <li><strong>Language:</strong> English</li>
-            </ul>
-            <a href="https://spiral.pixidigital.io" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--sm portfolio-card__cta">
-              View Live Site &nbsp;&#10148;
-            </a>
+            <p>Interaktives 3D-Portfolio mit Videovorschauen und flüssigen Scroll-Animationen. Entstanden, um Webdesign und Automatisierung anschaulich zu zeigen.</p>
+            <a class="link-action" href="https://spiral.pixidigital.io" target="_blank" rel="noopener noreferrer">Projekt ansehen<span class="sr-only"> (öffnet in neuem Tab)</span></a>
           </div>
-        </div>
+          <dl>
+            <div><dt>Art</dt><dd>Eigenes Projekt</dd></div>
+            <div><dt>Umfang</dt><dd>Design, Entwicklung, Animation</dd></div>
+            <div><dt>Technik</dt><dd>HTML, CSS, JavaScript</dd></div>
+            <div><dt>Sprache</dt><dd>Englisch</dd></div>
+          </dl>
+        </article>
 
-        <!-- Placeholder card -->
-        <div class="portfolio-card portfolio-card--placeholder">
-          <div class="placeholder-icon">+</div>
-          <h3>Your project here?</h3>
-          <p>I'm currently taking on new clients. Let's build something great together.</p>
-          <a href="#contact" class="btn btn--primary btn--sm">Get in touch</a>
-        </div>
+        <article class="project">
+          <div>
+            <h3>LaserCNC Allgäu</h3>
+            <p>Deutschsprachige Website für eine Laser- und CNC-Werkstatt mit Leistungsübersicht, Galerie und Kontaktformular. Dunkles, reduziertes Design.</p>
+            <a class="link-action" href="https://keen-raindrop-94ec98.netlify.app" target="_blank" rel="noopener noreferrer">Projekt ansehen<span class="sr-only"> (öffnet in neuem Tab)</span></a>
+          </div>
+          <dl>
+            <div><dt>Art</dt><dd>Eigenes Projekt</dd></div>
+            <div><dt>Umfang</dt><dd>Design, Entwicklung, Texte</dd></div>
+            <div><dt>Technik</dt><dd>HTML, CSS, JavaScript</dd></div>
+            <div><dt>Sprache</dt><dd>Deutsch</dd></div>
+          </dl>
+        </article>
 
+        <div class="next-project">
+          <h3>Als Nächstes: Ihr Projekt</h3>
+          <a class="btn btn--copper" href="#kontakt">Projekt anfragen</a>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- CONTACT -->
-  <section class="contact section" id="contact">
-    <div class="container contact__layout">
-      <div class="contact__info">
-        <span class="section-tag">Contact</span>
-        <h2>Let's build something together</h2>
-        <p>Have a project in mind? I'd love to hear about it. Fill out the form and I'll get back to you within 24 hours.</p>
+    <section class="section on-night has-field" id="kontakt" aria-labelledby="kontakt-title">
+      <canvas class="pixel-field" data-pixel="top" data-palette="night" aria-hidden="true"></canvas>
+      <div class="wrap contact">
+        <div class="contact__intro">
+          <h2 id="kontakt-title">Projekt besprechen</h2>
+          <p>Schildern Sie kurz, worum es geht. Ich melde mich innerhalb von 24 Stunden, auf Deutsch, Englisch, Ungarisch, Kroatisch oder Serbisch.</p>
+          <dl class="contact__list">
+            <div><dt>E-Mail</dt><dd><a href="mailto:contact@pixidigital.io">contact@pixidigital.io</a></dd></div>
+            <div><dt>Standort</dt><dd>Bayern, Deutschland</dd></div>
+            <div><dt>Antwortzeit</dt><dd>Innerhalb von 24 Stunden</dd></div>
+          </dl>
+        </div>
 
-        <div class="contact__details">
-          <div class="contact__detail">
-            <div class="contact__detail-icon">&#128205;</div>
-            <div>
-              <strong>Location</strong>
-              <span>Bavaria, Germany</span>
+        <form class="form" id="contactForm" novalidate>
+          <div class="form-row">
+            <div class="field">
+              <label for="name">Name *</label>
+              <input type="text" id="name" name="name" autocomplete="name" required aria-describedby="name-error" />
+              <p class="field-error" id="name-error"></p>
+            </div>
+            <div class="field">
+              <label for="email">E-Mail *</label>
+              <input type="email" id="email" name="email" autocomplete="email" required aria-describedby="email-error" />
+              <p class="field-error" id="email-error"></p>
             </div>
           </div>
-          <div class="contact__detail">
-            <div class="contact__detail-icon">&#9993;</div>
-            <div>
-              <strong>Email</strong>
-              <span><a href="mailto:contact@pixidigital.io">contact@pixidigital.io</a></span>
+          <div class="form-row">
+            <div class="field">
+              <label for="service">Leistung</label>
+              <select id="service" name="service">
+                <option value="">Bitte wählen</option>
+                <option value="Webdesign">Webdesign</option>
+                <option value="KI-Automatisierung">KI-Automatisierung</option>
+                <option value="KI-Chatbot">KI-Chatbot</option>
+                <option value="Sonstiges">Sonstiges</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="budget">Budget</label>
+              <select id="budget" name="budget">
+                <option value="">Noch offen</option>
+                <option value="300-500">300 bis 500 €</option>
+                <option value="500-1000">500 bis 1.000 €</option>
+                <option value="1000-2000">1.000 bis 2.000 €</option>
+                <option value="2000-5000">2.000 bis 5.000 €</option>
+                <option value="5000+">Über 5.000 €</option>
+              </select>
             </div>
           </div>
-          <div class="contact__detail">
-            <div class="contact__detail-icon">&#128336;</div>
-            <div>
-              <strong>Response time</strong>
-              <span>Within 24 hours</span>
+          <div class="field">
+            <label for="message">Ihr Projekt *</label>
+            <textarea id="message" name="message" rows="5" placeholder="Worum geht es und was soll erreicht werden?" required aria-describedby="message-error"></textarea>
+            <p class="field-error" id="message-error"></p>
+          </div>
+
+          <!-- Honeypot: für Menschen unsichtbar, Bots füllen es aus -->
+          <div class="hp" aria-hidden="true">
+            <label for="website">Website (bitte leer lassen)</label>
+            <input type="text" id="website" name="website" tabindex="-1" autocomplete="off" />
+          </div>
+
+          <div class="consent">
+            <div class="consent__row">
+              <input type="checkbox" id="privacy" name="privacy" required aria-describedby="privacy-error" />
+              <label for="privacy">Ich habe die <a href="datenschutz.html" target="_blank" rel="noopener">Datenschutzerklärung</a> gelesen und bin damit einverstanden, dass meine Angaben zur Bearbeitung meiner Anfrage verarbeitet werden. *</label>
             </div>
+            <p class="field-error" id="privacy-error"></p>
           </div>
-        </div>
 
-        <div class="contact__languages">
-          <p class="lang-note">Feel free to write in:</p>
-          <div class="lang-chips lang-chips--dark">
-            <span class="chip chip--sm">🇩🇪 Deutsch</span>
-            <span class="chip chip--sm">🇬🇧 English</span>
-            <span class="chip chip--sm">🇭🇺 Magyar</span>
-            <span class="chip chip--sm">🇭🇷 Hrvatski</span>
-            <span class="chip chip--sm">🇷🇸 Srpski</span>
-          </div>
-        </div>
+          <button type="submit" class="btn btn--copper" id="submitBtn">Anfrage senden</button>
+          <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+        </form>
       </div>
+    </section>
+  </main>
 
-      <form class="contact__form" id="contactForm" novalidate>
-        <div class="form-row">
-          <div class="form-group">
-            <label for="name">Full Name *</label>
-            <input type="text" id="name" name="name" placeholder="Jane Doe" required />
-          </div>
-          <div class="form-group">
-            <label for="email">Email *</label>
-            <input type="email" id="email" name="email" placeholder="jane@example.com" required />
-          </div>
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <a class="brand" href="#top" aria-label="Pixi Digital, zum Seitenanfang">
+            <svg viewBox="0 0 20 25" aria-hidden="true" focusable="false">
+              <g fill="#e7e9eb">
+                <rect x="0" y="0" width="4.6" height="4.6"/><rect x="5" y="0" width="4.6" height="4.6"/><rect x="10" y="0" width="4.6" height="4.6"/>
+                <rect x="0" y="5" width="4.6" height="4.6"/>
+                <rect x="0" y="10" width="4.6" height="4.6"/><rect x="5" y="10" width="4.6" height="4.6"/><rect x="10" y="10" width="4.6" height="4.6"/>
+                <rect x="0" y="15" width="4.6" height="4.6"/>
+                <rect x="0" y="20" width="4.6" height="4.6"/>
+              </g>
+              <rect x="15" y="5" width="4.6" height="4.6" fill="#e09a66"/>
+            </svg>
+            <b>Pixi</b><span>Digital</span>
+          </a>
+          <p>Webdesign und KI-Automatisierung für kleine und mittlere Unternehmen.</p>
         </div>
-        <div class="form-row">
-          <div class="form-group">
-            <label for="service">Service needed</label>
-            <select id="service" name="service">
-              <option value="">Select service …</option>
-              <option value="Web Design">Web Design</option>
-              <option value="Logo Design">Logo Design</option>
-              <option value="Automation">Automation</option>
-              <option value="Signage">Signage</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="budget">Budget</label>
-            <select id="budget" name="budget">
-              <option value="">Select range …</option>
-              <option value="300-500">€300 – €500</option>
-              <option value="500-1000">€500 – €1,000</option>
-              <option value="1000-2000">€1,000 – €2,000</option>
-              <option value="2000-5000">€2,000 – €5,000</option>
-              <option value="5000+">€5,000+</option>
-            </select>
-          </div>
+        <div>
+          <h2>Leistungen</h2>
+          <ul>
+            <li><a href="#leistungen">Webdesign und Entwicklung</a></li>
+            <li><a href="#leistungen">KI-Workflow-Automatisierung</a></li>
+            <li><a href="#leistungen">KI-Chatbots</a></li>
+          </ul>
         </div>
-        <div class="form-group">
-          <label for="message">Tell me about your project *</label>
-          <textarea id="message" name="message" rows="5" placeholder="Describe your business, what you need, and any relevant details …" required></textarea>
+        <div>
+          <h2>Pixi Digital</h2>
+          <ul>
+            <li><a href="#ueber-mich">Über mich</a></li>
+            <li><a href="#projekte">Projekte</a></li>
+            <li><a href="#kontakt">Kontakt</a></li>
+            <li><a href="impressum.html">Impressum</a></li>
+            <li><a href="datenschutz.html">Datenschutz</a></li>
+          </ul>
         </div>
-        <div class="form-group form-group--checkbox">
-          <input type="checkbox" id="privacy" name="privacy" required />
-          <label for="privacy">I agree to the
-            <button type="button" class="privacy-link" id="openPrivacyModal">Privacy Policy</button>. *
-          </label>
-        </div>
-        <button type="submit" class="btn btn--primary btn--full" id="submitBtn" disabled>
-          Send Message &nbsp;&#10148;
-        </button>
-        <div class="form-success" id="formSuccess">
-          &#10003; Message sent! I'll get back to you within 24 hours.
-        </div>
-      </form>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="container footer__layout">
-      <div class="footer__brand">
-        <a href="#hero" class="nav__logo">
-          <span class="logo-dot"></span>
-          Pixi<span class="logo-accent">Digital</span>
-        </a>
-        <p>Web design & AI automation for small businesses in Bavaria and beyond.</p>
       </div>
-      <div class="footer__links">
-        <h4>Services</h4>
-        <ul>
-          <li><a href="#services">Web Design</a></li>
-          <li><a href="#services">AI Automation</a></li>
-          <li><a href="#services">AI Chatbots</a></li>
-        </ul>
-      </div>
-      <div class="footer__links">
-        <h4>Company</h4>
-        <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li><a href="#">Impressum</a></li>
-          <li><a href="#">Datenschutz</a></li>
-        </ul>
-      </div>
-      <div class="footer__contact">
-        <h4>Contact</h4>
-        <p>Bavaria, Germany</p>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Pixi Digital</p>
         <p><a href="mailto:contact@pixidigital.io">contact@pixidigital.io</a></p>
-        <div class="footer__langs">
-          <span title="German">🇩🇪</span>
-          <span title="English">🇬🇧</span>
-          <span title="Hungarian">🇭🇺</span>
-          <span title="Croatian">🇭🇷</span>
-          <span title="Serbian">🇷🇸</span>
-        </div>
-      </div>
-    </div>
-    <div class="footer__bottom">
-      <div class="container">
-        <p>&copy; 2026 Pixi Digital. All rights reserved.</p>
-        <p><a href="#">Impressum</a> &middot; <a href="#">Privacy Policy</a></p>
       </div>
     </div>
   </footer>
 
-  <!-- PRIVACY POLICY MODAL -->
-  <div class="modal-overlay" id="privacyModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-    <div class="modal">
-      <div class="modal__header">
-        <h2 id="modalTitle">Privacy Policy</h2>
-        <button class="modal__close" id="closePrivacyModal" aria-label="Close">&times;</button>
-      </div>
-      <div class="modal__body">
-        <p class="modal__updated">Last updated: April 2026</p>
-
-        <h3>1. Controller</h3>
-        <p>Pixi Digital<br />Bavaria, Germany<br />Email: <a href="mailto:contact@pixidigital.io">contact@pixidigital.io</a></p>
-
-        <h3>2. Data We Collect</h3>
-        <p>When you submit the contact form, we collect the following personal data: name, email address, company name (optional), and the content of your message. This data is provided voluntarily by you.</p>
-
-        <h3>3. Purpose and Legal Basis</h3>
-        <p>Your data is processed solely to respond to your enquiry and, where applicable, to initiate a business relationship. The legal basis is Art. 6(1)(b) GDPR (performance of a contract or pre-contractual measures) and Art. 6(1)(f) GDPR (legitimate interest in responding to business enquiries).</p>
-
-        <h3>4. Data Processor – Formspree</h3>
-        <p>Contact form submissions are processed by Formspree, Inc. (USA). Formspree acts as a data processor under a Data Processing Agreement. Data may be transferred to the US under Standard Contractual Clauses. For details, see <a href="https://formspree.io/legal/privacy-policy/" target="_blank" rel="noopener">Formspree's Privacy Policy</a>.</p>
-
-        <h3>5. Retention Period</h3>
-        <p>Your data is retained only as long as necessary to process your enquiry and for any follow-up communication, and will be deleted thereafter unless statutory retention obligations apply.</p>
-
-        <h3>6. Your Rights (GDPR)</h3>
-        <p>Under the GDPR you have the right to access, rectify, erase, restrict or object to the processing of your personal data, and the right to data portability. You also have the right to lodge a complaint with a supervisory authority. To exercise any of these rights, contact us at <a href="mailto:contact@pixidigital.io">contact@pixidigital.io</a>.</p>
-
-        <h3>7. No Obligation</h3>
-        <p>Providing your personal data is voluntary. However, without your name and email address we are unable to respond to your enquiry.</p>
-      </div>
-      <div class="modal__footer">
-        <button class="btn btn--primary btn--sm" id="acceptPrivacy">Accept &amp; Close</button>
-      </div>
-    </div>
-  </div>
-
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
+  <script src="pixel-field.js" defer></script>
+  <script src="pixel-fall.js" defer></script>
 </body>
 </html>
