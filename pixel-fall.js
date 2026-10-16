@@ -43,7 +43,7 @@
     const narrow = W < 720;
     cell = narrow ? 14 : 20;
     cols = Math.ceil(W / cell);
-    fmax = narrow ? 900 : 1300;
+    fmax = narrow ? 3600 : 3400;
 
     heroH = hero.offsetHeight;
     heroRows = Math.ceil(heroH / cell);
@@ -110,7 +110,7 @@
     const Fd = Fe * fall;
 
     // 1) Hero-Raster, das beim Scrollen herabsinkt
-    if (S < 1800) {
+    if (S < contactTop) {
       for (let r = 0; r < heroRows; r++) {
         const y0 = r * cell + cell / 2;
         for (let c = 0; c < cols; c++) {

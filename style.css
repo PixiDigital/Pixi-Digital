@@ -400,6 +400,62 @@ h3 { font-size: clamp(1.3rem, 1.1rem + 0.8vw, 1.7rem); font-stretch: 108%; }
 }
 .next-project h3 { max-width: 18em; }
 
+/* Qelarix: eigenes Produkt, in den Farben von Pixi Digital */
+.showcase__head { max-width: 46rem; margin-inline: auto; text-align: center; }
+.showcase__eyebrow {
+  margin-inline: auto;
+  color: var(--copper-deep);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+.showcase__eyebrow span { margin: 0 0.5em; opacity: 0.5; }
+.showcase__title {
+  margin-top: 18px;
+  font-size: clamp(3.2rem, 1.6rem + 7vw, 7.5rem);
+  font-stretch: 120%;
+  letter-spacing: -0.035em;
+  line-height: 0.95;
+}
+.showcase__lead { margin: 24px auto 0; font-size: clamp(1.05rem, 1rem + 0.35vw, 1.25rem); }
+.showcase__media {
+  margin-top: clamp(40px, 6vw, 72px);
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: var(--night);
+  border: 1px solid var(--steel-line);
+  box-shadow: 0 40px 90px -40px rgba(31, 36, 41, 0.55);
+}
+.showcase__media video { width: 100%; height: 100%; object-fit: cover; }
+.showcase__body {
+  display: grid;
+  grid-template-columns: minmax(0, 6fr) minmax(0, 5fr);
+  gap: 32px clamp(32px, 6vw, 96px);
+  margin-top: clamp(40px, 5vw, 64px);
+}
+.showcase__stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+.showcase__stats li { padding-top: 18px; border-top: 2px solid var(--copper); }
+.showcase__stats strong {
+  display: block;
+  color: var(--ink);
+  font-size: clamp(1.9rem, 1.4rem + 1.6vw, 2.8rem);
+  font-weight: 700;
+  font-stretch: 116%;
+  line-height: 1;
+}
+.showcase__stats span { display: block; margin-top: 10px; color: var(--ink-mute); font-size: 0.95rem; line-height: 1.45; }
+.showcase__facts div {
+  display: grid;
+  grid-template-columns: 8.5em 1fr;
+  gap: 16px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--steel-line);
+  font-size: 0.98rem;
+}
+.showcase__facts dt { color: var(--ink); font-weight: 600; }
+.showcase__actions { margin-top: clamp(40px, 5vw, 56px); text-align: center; }
+
 /* Kontakt (dunkel) */
 .on-night { background: var(--night); color: var(--on-night); }
 .on-night h2, .on-night h3 { color: #f1f2f4; }
@@ -606,12 +662,17 @@ main > section { position: relative; } /* Sektionen liegen über dem Canvas */
   .footer-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .footer-grid > :first-child { grid-column: 1 / -1; }
   .reel { aspect-ratio: 16 / 9; }
+  .showcase__body { grid-template-columns: minmax(0, 1fr); }
 }
 @media (max-width: 560px) {
   :root { --wrap: min(1200px, 100% - 40px); }
   .form-row { grid-template-columns: minmax(0, 1fr); }
   .about__facts { grid-template-columns: minmax(0, 1fr); }
-  .project dl div { grid-template-columns: 7.2em 1fr; }
+  .project dl div,
+  .showcase__facts div { grid-template-columns: 7.2em 1fr; }
+  .showcase__stats { grid-template-columns: minmax(0, 1fr); gap: 0; }
+  .showcase__stats li { display: flex; align-items: baseline; gap: 16px; padding: 14px 0; border-top-width: 1px; }
+  .showcase__stats span { margin-top: 0; }
   .brand { font-size: 1.4rem; gap: 12px; }
   .brand svg { width: 30px; height: 37px; }
   .hero__inner { padding-bottom: 40px; }
