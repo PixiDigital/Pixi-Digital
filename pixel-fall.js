@@ -10,7 +10,7 @@
 (() => {
   const canvas = document.getElementById('pixelFall');
   const hero = document.getElementById('top');
-  const contact = document.getElementById('kontakt');
+  const contact = document.getElementById('kontakt') || document.getElementById('contact');
   if (!canvas || !canvas.getContext || !hero || !contact) return;
 
   const ctx = canvas.getContext('2d');

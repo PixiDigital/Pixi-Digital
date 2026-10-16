@@ -2,6 +2,39 @@
 
 const WEBHOOK_URL = 'https://hook.eu1.make.com/1ygkrxwp469r6g9ccnttnslmf8v4kak4';
 
+// --- Texte je nach Seitensprache (<html lang="de"> oder "en") ---------------
+const TEXT = {
+  de: {
+    menuOpen: 'Menü öffnen',
+    menuClose: 'Menü schließen',
+    errors: {
+      name: 'Bitte geben Sie Ihren Namen an.',
+      email: 'Bitte geben Sie eine gültige E-Mail-Adresse an.',
+      message: 'Bitte beschreiben Sie kurz Ihr Projekt.',
+      privacy: 'Bitte stimmen Sie der Verarbeitung Ihrer Angaben zu.',
+    },
+    sent: 'Danke, Ihre Nachricht ist angekommen. Ich melde mich innerhalb von 24 Stunden.',
+    failed: 'Die Nachricht konnte nicht gesendet werden. Bitte versuchen Sie es erneut oder schreiben Sie direkt an contact@pixidigital.io.',
+    sending: 'Wird gesendet …',
+    submit: 'Anfrage senden',
+  },
+  en: {
+    menuOpen: 'Open menu',
+    menuClose: 'Close menu',
+    errors: {
+      name: 'Please enter your name.',
+      email: 'Please enter a valid email address.',
+      message: 'Please briefly describe your project.',
+      privacy: 'Please agree to the processing of your details.',
+    },
+    sent: 'Thank you, your message has arrived. I will get back to you within 24 hours.',
+    failed: 'Your message could not be sent. Please try again or write directly to contact@pixidigital.io.',
+    sending: 'Sending …',
+    submit: 'Send inquiry',
+  },
+};
+const t = document.documentElement.lang === 'en' ? TEXT.en : TEXT.de;
+
 // --- Kopfzeile: Hintergrund beim Scrollen ----------------------------------
 const header = document.getElementById('siteHeader');
 const onScroll = () => header.classList.toggle('is-scrolled', window.scrollY > 24);
@@ -15,7 +48,7 @@ const nav = document.getElementById('siteNav');
 function setMenu(open) {
   header.classList.toggle('menu-open', open);
   toggle.setAttribute('aria-expanded', String(open));
-  toggle.setAttribute('aria-label', open ? 'Menü schließen' : 'Menü öffnen');
+  toggle.setAttribute('aria-label', open ? t.menuClose : t.menuOpen);
 }
 toggle.addEventListener('click', () => setMenu(!header.classList.contains('menu-open')));
 nav.querySelectorAll('a').forEach((a) => a.addEventListener('click', () => setMenu(false)));
@@ -76,12 +109,7 @@ if (form) {
     });
   });
 
-  const errors = {
-    name: 'Bitte geben Sie Ihren Namen an.',
-    email: 'Bitte geben Sie eine gültige E-Mail-Adresse an.',
-    message: 'Bitte beschreiben Sie kurz Ihr Projekt.',
-    privacy: 'Bitte stimmen Sie der Verarbeitung Ihrer Angaben zu.',
-  };
+  const errors = t.errors;
 
   function setError(id, on) {
     const field = form.querySelector(`#${id}`);
@@ -132,7 +160,7 @@ if (form) {
     const looksLikeBot = f.website.value !== '' || Date.now() - openedAt < 3000;
     if (looksLikeBot) {
       form.reset();
-      showStatus('Danke, Ihre Nachricht ist angekommen. Ich melde mich innerhalb von 24 Stunden.');
+      showStatus(t.sent);
       return;
     }
 
@@ -145,7 +173,7 @@ if (form) {
     };
 
     submitBtn.disabled = true;
-    submitBtn.textContent = 'Wird gesendet …';
+    submitBtn.textContent = t.sending;
 
     const controller = new AbortController();
     const timeout = setTimeout(() => controller.abort(), 15000);
@@ -159,16 +187,13 @@ if (form) {
       });
       if (!response.ok) throw new Error(`HTTP ${response.status}`);
       form.reset();
-      showStatus('Danke, Ihre Nachricht ist angekommen. Ich melde mich innerhalb von 24 Stunden.');
+      showStatus(t.sent);
     } catch (err) {
-      showStatus(
-        'Die Nachricht konnte nicht gesendet werden. Bitte versuchen Sie es erneut oder schreiben Sie direkt an contact@pixidigital.io.',
-        true
-      );
+      showStatus(t.failed, true);
     } finally {
       clearTimeout(timeout);
       submitBtn.disabled = false;
-      submitBtn.textContent = 'Anfrage senden';
+      submitBtn.textContent = t.submit;
     }
   });
 }

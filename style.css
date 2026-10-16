@@ -219,6 +219,31 @@ h3 { font-size: clamp(1.3rem, 1.1rem + 0.8vw, 1.7rem); font-stretch: 108%; }
 .menu-open .nav-toggle span::before { transform: translateY(7px) rotate(45deg); }
 .menu-open .nav-toggle span::after  { transform: translateY(-7px) rotate(-45deg); }
 
+/* Sprachumschalter: Flagge der anderen Sprache, ganz rechts in der Kopfzeile */
+.site-header .wrap { gap: 28px; }
+.site-header .brand { margin-right: auto; }
+.site-header nav { order: 1; }
+.lang-switch { order: 2; }
+.nav-toggle { order: 3; }
+.lang-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  color: var(--ink);
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+}
+.lang-switch .flag {
+  flex: none;
+  border-radius: 2px;
+  box-shadow: 0 0 0 1px rgba(31, 36, 41, 0.18);
+  transition: transform 0.2s;
+}
+.lang-switch:hover .flag { transform: scale(1.12); }
+
 /* --- Hero ----------------------------------------------------------------- */
 .hero {
   position: relative;
@@ -554,6 +579,7 @@ main > section { position: relative; } /* Sektionen liegen über dem Canvas */
 /* --- Responsiv ------------------------------------------------------------ */
 @media (max-width: 860px) {
   .nav-toggle { display: block; }
+  .site-header .wrap { gap: 14px; }
   .nav-list {
     position: absolute;
     top: var(--header-h);
