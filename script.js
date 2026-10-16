@@ -76,20 +76,20 @@ if (sectionLinks.length) {
   targets.forEach((t) => spy.observe(t));
 }
 
-// --- Videovorschau: nur abspielen, wenn sichtbar ---------------------------
-const reel = document.getElementById('reelVideo');
-if (reel) {
+// --- Videos: nur abspielen, wenn sichtbar ---------------------------------
+const autoVideos = document.querySelectorAll('video[data-autoplay]');
+if (autoVideos.length) {
   const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if (reduce) {
-    reel.controls = true;
-  } else {
-    new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) reel.play().catch(() => {});
-        else reel.pause();
-      });
-    }, { threshold: 0.25 }).observe(reel);
-  }
+  const watcher = reduce ? null : new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) entry.target.play().catch(() => {});
+      else entry.target.pause();
+    });
+  }, { threshold: 0.25 });
+  autoVideos.forEach((video) => {
+    if (reduce) video.controls = true;
+    else watcher.observe(video);
+  });
 }
 
 // --- Kontaktformular -------------------------------------------------------
