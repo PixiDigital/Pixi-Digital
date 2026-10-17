@@ -505,6 +505,71 @@ h3 { font-size: clamp(1.3rem, 1.1rem + 0.8vw, 1.7rem); font-stretch: 108%; }
 .field-error:empty { display: none; }
 .hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
 
+/* Beispielbilder im Formular */
+.upload__label { color: var(--ink); font-weight: 600; font-size: 0.95rem; }
+.upload__opt { color: var(--ink-mute); font-weight: 400; }
+.upload__drop {
+  position: relative;
+  display: grid;
+  gap: 4px;
+  justify-items: center;
+  padding: 22px 16px;
+  text-align: center;
+  border: 1px dashed #8f979f;
+  border-radius: var(--radius);
+  background: #f4f5f6;
+  transition: border-color 0.15s, background-color 0.15s;
+}
+.upload__drop:hover,
+.upload__drop.is-over { border-color: var(--copper); background: #fff; }
+.upload__drop:focus-within { outline: 2px solid var(--copper); outline-offset: 1px; border-color: var(--copper); }
+.field .upload__drop input { position: absolute; inset: 0; width: 100%; height: 100%; padding: 0; border: 0; opacity: 0; cursor: pointer; }
+.upload__text { color: var(--ink); }
+.upload__text strong { color: var(--copper-deep); }
+.upload__hint { max-width: 46ch; color: var(--ink-mute); font-size: 0.85rem; }
+.upload__list { display: grid; gap: 6px; margin: 0; padding: 0; list-style: none; }
+.upload__list:empty { display: none; }
+.upload__item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 8px 8px 10px;
+  border: 1px solid var(--steel-line);
+  border-radius: var(--radius);
+  background: #f4f5f6;
+  color: var(--ink);
+  font-size: 0.92rem;
+}
+.upload__thumb {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 2px;
+  background: var(--steel-sunk);
+  color: var(--ink-soft);
+  font-size: 0.7rem;
+  font-weight: 700;
+  object-fit: cover;
+}
+.upload__name { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.upload__size { flex: none; color: var(--ink-mute); font-size: 0.85rem; }
+.upload__remove {
+  flex: none;
+  width: 32px;
+  height: 32px;
+  border: 0;
+  border-radius: var(--radius);
+  background: transparent;
+  color: var(--ink-soft);
+  font-size: 1.2rem;
+  line-height: 1;
+  cursor: pointer;
+}
+.upload__remove:hover { background: var(--steel-sunk); color: var(--ink); }
+.upload__remove:focus-visible { outline: 2px solid var(--copper); outline-offset: 1px; }
+
 .consent { display: grid; gap: 6px; }
 .consent__row { display: flex; gap: 12px; align-items: flex-start; }
 .consent input { flex: none; width: 20px; height: 20px; margin: 3px 0 0; accent-color: var(--copper); }
