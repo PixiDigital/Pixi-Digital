@@ -307,6 +307,17 @@
             <p class="field-error" id="message-error"></p>
           </div>
 
+          <div class="field upload">
+            <span class="upload__label" id="files-label">Beispielbilder <span class="upload__opt">(optional)</span></span>
+            <div class="upload__drop" id="uploadDrop">
+              <input type="file" id="files" name="files" multiple accept="image/jpeg,image/png,image/webp,application/pdf" aria-labelledby="files-label" aria-describedby="files-hint files-error" />
+              <p class="upload__text"><strong>Dateien auswählen</strong> oder hierher ziehen</p>
+              <p class="upload__hint" id="files-hint">Zum Beispiel Websites, die Ihnen gefallen, Ihr Logo oder Fotos. Bis zu 5 Dateien, zusammen max. 4 MB: JPG, PNG, WebP oder PDF. Fotos werden automatisch verkleinert.</p>
+            </div>
+            <ul class="upload__list" id="fileList"></ul>
+            <p class="field-error" id="files-error"></p>
+          </div>
+
           <!-- Honeypot: für Menschen unsichtbar, Bots füllen es aus -->
           <div class="hp" aria-hidden="true">
             <label for="website">Website (bitte leer lassen)</label>
